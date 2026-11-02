@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="株式会社CaCHI（カチ）は「今以上の更なる価値を創出する」をミッションに、産業廃棄物プラットフォームとインサイドセールス・パートナーズを展開しています。">
+<meta property="og:title" content="株式会社CaCHI（カチ）">
+<meta property="og:site_name" content="株式会社CaCHI">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"株式会社CaCHI","alternateName":["CaCHI","カチ","CaCHI Co., Ltd."],"url":"https://cachi.jp/","logo":"https://cachi.jp/logo.png","foundingDate":"2025-11","founder":{"@type":"Person","name":"虎口 大地"},"address":{"@type":"PostalAddress","postalCode":"134-0083","addressRegion":"東京都","addressLocality":"江戸川区","streetAddress":"中葛西7-9-23","addressCountry":"JP"},"description":"産業廃棄物マッチングプラットフォームの開発・運営、環境コンサルティング、インサイドセールス事業（テレアポ代行）"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"株式会社CaCHI","alternateName":"CaCHI","url":"https://cachi.jp/"}
+</script>
+
+<meta property="og:description" content="今以上の更なる価値を創出する。産業廃棄物プラットフォームとインサイドセールス・パートナーズ。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cachi.jp/">
+<meta property="og:image" content="https://cachi.jp/images/og.jpg">
+<link rel="icon" href="/logo.png">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="canonical" href="https://cachi.jp/">
+<title>株式会社CaCHI（カチ）｜今以上の更なる価値を創出する</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+[hidden] { display: none !important; }
+/* Layout: deep-navy single world. Full-bleed bands, a 1180px inner column, hairline rules,
+   bilingual section heads (English serif label + Japanese mincho), the logo's circles as the recurring motif. */
+:root {
+  color-scheme: dark;
+  --ink: #030816;          /* deepest navy: logo "black" circles, footer */
+  --navy: #061026;         /* page ground */
+  --navy-2: #0A1834;       /* raised band */
+  --navy-3: #12274D;       /* surfaces, slate circles */
+  --line: rgba(196, 210, 233, 0.16);
+  --ivory: #EFEAE0;        /* primary text, light circles */
+  --mist: #A8B5CB;         /* secondary text */
+  --sky: #A3C8EB;          /* logo center circle: the one accent */
+  --gold: #C9B68C;         /* hairline details only */
+  --f-display: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --f-latin: "Cormorant Garamond", "Times New Roman", serif;
+  --f-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  --col: 1180px;
+  --ease: cubic-bezier(.2,.7,.1,1);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--navy); color: var(--ivory);
+  font-family: var(--f-body); font-size: 15px; line-height: 1.9; letter-spacing: .04em;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden; margin: 0;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--navy); }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+:focus-visible { outline: 1px solid var(--sky); outline-offset: 4px; }
+.wrap { max-width: calc(var(--col) + 2 * 40px); margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+@media (min-width: 720px) { .wrap { padding-left: max(40px, env(safe-area-inset-left, 0px)); padding-right: max(40px, env(safe-area-inset-right, 0px)); } }
+
+/* ---------- header ---------- */
+.site-head {
+  position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; z-index: 50;
+  transition: background .5s var(--ease), border-color .5s var(--ease);
+  border-bottom: 1px solid transparent;
+}
+.site-head.scrolled { background: rgba(5, 13, 32, .85); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-color: var(--line); }
+.head-in { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 76px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand-mark { width: 38px; height: 38px; border-radius: 50%; background: var(--ivory); display: grid; place-items: center; }
+.brand-mark img { width: 30px; height: 30px; }
+.brand-name { font-family: var(--f-latin); font-size: 26px; font-weight: 500; letter-spacing: .08em; line-height: 1; }
+.nav { display: flex; align-items: center; gap: 34px; }
+.nav a { text-decoration: none; font-family: var(--f-latin); font-size: 16px; letter-spacing: .14em; color: var(--mist); transition: color .3s; }
+.nav a:hover { color: var(--ivory); }
+.nav a.btn-line { color: var(--ivory); border: 1px solid var(--line); padding: 8px 22px; border-radius: 999px; transition: border-color .3s, background .3s; }
+.nav a.btn-line:hover { border-color: var(--sky); background: rgba(163,200,235,.08); }
+.menu-btn { display: none; background: none; border: 1px solid var(--line); border-radius: 999px; width: 46px; height: 46px; color: var(--ivory); cursor: pointer; }
+.menu-btn span { display: block; width: 18px; height: 1px; background: currentColor; margin: 5px auto; transition: transform .3s; }
+@media (max-width: 880px) {
+  .menu-btn { display: block; }
+  .nav { position: fixed; inset: calc(76px + env(safe-area-inset-top, 0px)) 0 auto 0; flex-direction: column; align-items: flex-start; gap: 0; background: rgba(8,19,42,.97); border-bottom: 1px solid var(--line); padding: 8px max(16px, env(safe-area-inset-right, 0px)) 24px max(16px, env(safe-area-inset-left, 0px)); }
+  .nav a { width: 100%; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 18px; }
+  .nav a.btn-line { border: 1px solid var(--line); margin-top: 18px; text-align: center; padding: 12px; }
+  .site-head:not(.open) .nav { display: none; }
+  .site-head.open { background: rgba(8,19,42,.97); }
+  .site-head.open .menu-btn span:first-child { transform: translateY(3px) rotate(45deg); }
+  .site-head.open .menu-btn span:last-child { transform: translateY(-3px) rotate(-45deg); }
+}
+
+/* ---------- hero ---------- */
+.hero { position: relative; min-height: min(860px, 94svh); display: flex; align-items: center; overflow: hidden;
+  background:
+    radial-gradient(1000px 680px at 72% 46%, rgba(26, 50, 98, .38), transparent 62%),
+    radial-gradient(800px 600px at 10% 100%, rgba(3, 8, 22, .8), transparent 70%),
+    var(--navy); }
+#cluster { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-in { position: relative; z-index: 2; width: 100%; padding-block: 140px 110px; pointer-events: none; }
+.hero-in a { pointer-events: auto; }
+.hero-copy { max-width: 680px; }
+.eyebrow { font-family: var(--f-latin); font-size: 15px; letter-spacing: .32em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 16px; }
+.eyebrow .nocase { text-transform: none; }
+.eyebrow::before { content: ""; width: 40px; height: 1px; background: var(--gold); opacity: .7; }
+.hero h1 { font-family: var(--f-display); font-weight: 500; font-size: clamp(38px, 5.4vw, 74px); line-height: 1.32; letter-spacing: .06em; margin: 28px 0 0; }
+.hero h1 .ln { display: block; overflow: hidden; }
+.hero h1 .ch { display: inline-block; animation: rise 1.3s var(--ease) both; animation-delay: calc(1.1s + var(--i) * 70ms); }
+.hero h1 em { font-style: normal; color: var(--sky); }
+@keyframes rise { from { transform: translateY(105%); opacity: 0; filter: blur(6px); } to { transform: none; opacity: 1; filter: none; } }
+.hero-lead { margin: 30px 0 0; color: var(--mist); font-size: 15.5px; max-width: 34em; animation: fade 1.4s var(--ease) 2.1s both; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; animation: fade 1.4s var(--ease) 2.4s both; }
+@keyframes fade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.btn { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; font-size: 14px; letter-spacing: .12em; padding: 15px 30px; border-radius: 999px; transition: background .35s, color .35s, border-color .35s; }
+.btn-solid { background: var(--ivory); color: var(--ink); }
+.btn-solid:hover { background: var(--sky); }
+.btn-ghost { border: 1px solid var(--line); color: var(--ivory); }
+.btn-ghost:hover { border-color: var(--sky); }
+.btn .arr { width: 22px; height: 1px; background: currentColor; position: relative; transition: width .35s var(--ease); }
+.btn .arr::after { content: ""; position: absolute; right: 0; top: -3px; width: 7px; height: 7px; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: rotate(45deg); }
+.btn:hover .arr { width: 32px; }
+.scroll-cue { position: absolute; z-index: 2; left: 50%; bottom: 28px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 10px; font-family: var(--f-latin); font-size: 12px; letter-spacing: .3em; color: var(--mist); animation: fade 1.2s var(--ease) 2.8s both; }
+.scroll-cue i { width: 1px; height: 46px; background: linear-gradient(var(--mist), transparent); position: relative; overflow: hidden; }
+.scroll-cue i::after { content: ""; position: absolute; left: 0; top: -40%; width: 1px; height: 40%; background: var(--ivory); animation: drip 2.2s ease-in-out infinite; }
+@keyframes drip { to { top: 110%; } }
+@media (max-width: 880px) {
+  .hero { min-height: auto; align-items: flex-end; }
+  .hero-in { padding-block: 460px 90px; }
+  .eyebrow .long { display: none; }
+  .scroll-cue { display: none; }
+}
+
+/* ---------- section scaffolding ---------- */
+section { position: relative; }
+.band { padding-block: clamp(88px, 12vw, 160px); }
+.band-raised { background: var(--navy-2); }
+.sec-head { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 40px 72px; align-items: start; margin-bottom: clamp(48px, 7vw, 88px); }
+.sec-label { font-family: var(--f-latin); font-size: clamp(48px, 6vw, 80px); line-height: 1; font-weight: 400; letter-spacing: .02em; margin: 0; }
+.sec-label small { display: block; font-family: var(--f-body); font-size: 13px; letter-spacing: .2em; color: var(--gold); margin-top: 16px; }
+.sec-title { font-family: var(--f-display); font-weight: 500; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.6; letter-spacing: .06em; margin: 6px 0 0; text-wrap: balance; }
+.sec-text { color: var(--mist); max-width: 38em; margin: 22px 0 0; }
+@media (max-width: 880px) { .sec-head { grid-template-columns: minmax(0, 1fr); } }
+
+/* reveal: elements are visible at rest; JS only marks below-the-fold items before they enter */
+.pending { opacity: 0; transform: translateY(28px); }
+.reveal { transition: opacity 1.1s var(--ease), transform 1.1s var(--ease); }
+
+/* ---------- mission / vision ---------- */
+.mv { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-top: 1px solid var(--line); }
+.mv-item { padding: 48px 48px 8px 0; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.mv-item + .mv-item { padding-left: 48px; border-left: 1px solid var(--line); }
+.mv-k { font-family: var(--f-latin); font-style: italic; font-size: 22px; color: var(--sky); letter-spacing: .08em; }
+.mv-item h3 { font-family: var(--f-display); font-weight: 500; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.6; margin: 0; letter-spacing: .06em; }
+.mv-item p { color: var(--mist); margin: 0; }
+@media (max-width: 760px) {
+  .mv { grid-template-columns: minmax(0, 1fr); }
+  .mv-item { padding: 36px 0 8px; }
+  .mv-item + .mv-item { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); margin-top: 32px; }
+}
+
+/* ---------- services overview ---------- */
+.svc-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; }
+.svc-card { position: relative; overflow: hidden; isolation: isolate; display: flex; flex-direction: column; gap: 18px; padding: clamp(32px, 4vw, 52px); border: 1px solid var(--line); border-radius: 4px; background: linear-gradient(160deg, rgba(24,48,92,.55), rgba(10,24,52,.2)); text-decoration: none; transition: border-color .5s var(--ease), transform .6s var(--ease); min-width: 0; }
+.svc-card:hover { border-color: rgba(163,200,235,.5); transform: translateY(-4px); }
+.svc-card .dots { position: absolute; right: -60px; top: -60px; width: 240px; height: 240px; opacity: .5; transition: transform 1.2s var(--ease); }
+.svc-card:hover .dots { transform: rotate(18deg) scale(1.06); }
+.svc-no { font-family: var(--f-latin); font-size: 15px; letter-spacing: .3em; color: var(--gold); }
+.svc-card h3 { font-family: var(--f-display); font-weight: 500; font-size: clamp(20px, 1.8vw, 26px); line-height: 1.5; margin: 0; letter-spacing: .04em; }
+.svc-card .en { font-family: var(--f-latin); font-size: 18px; color: var(--mist); letter-spacing: .1em; margin-top: -10px; }
+.svc-card p { color: var(--mist); margin: 0; }
+.svc-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 10px; }
+.svc-tags span { font-size: 12px; letter-spacing: .1em; padding: 4px 14px; border: 1px solid var(--line); border-radius: 999px; color: var(--ivory); }
+.svc-more { display: inline-flex; align-items: center; gap: 12px; font-size: 13px; letter-spacing: .14em; color: var(--ivory); }
+@media (max-width: 860px) { .svc-grid { grid-template-columns: minmax(0, 1fr); } }
+
+.svc-img { display: block; margin: calc(-1 * clamp(32px, 4vw, 52px)) calc(-1 * clamp(32px, 4vw, 52px)) 8px; aspect-ratio: 16 / 7; overflow: hidden; position: relative; background: #F4F6FA; }
+.svc-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 1.4s var(--ease); }
+.svc-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,16,38,.05) 30%, rgba(6,16,38,.85)); }
+.svc-card:hover .svc-img img { transform: scale(1.04); }
+.svc-card .dots { z-index: 1; }
+.photo-band { position: relative; overflow: hidden; min-height: clamp(360px, 46vw, 560px); display: flex; align-items: flex-end; background: var(--ink); }
+.photo-band > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(.35) contrast(1.05) brightness(.8); }
+.photo-band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6,16,38,.92) 0%, rgba(6,16,38,.6) 45%, rgba(6,16,38,.15) 100%), linear-gradient(0deg, rgba(6,16,38,.75), transparent 50%); }
+.photo-band-in { position: relative; z-index: 1; width: 100%; padding-block: 64px; }
+.pb-title { font-family: var(--f-display); font-weight: 500; font-size: clamp(24px, 3.2vw, 40px); line-height: 1.6; letter-spacing: .06em; margin: 20px 0 0; text-wrap: balance; }
+.side-img { margin: calc(-1 * clamp(30px, 4vw, 48px)) calc(-1 * clamp(30px, 4vw, 48px)) 10px; aspect-ratio: 16 / 9; overflow: hidden; }
+.side-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.85); }
+
+/* ---------- platform (waste) ---------- */
+.feature-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 18px 40px; margin-bottom: 44px; }
+.feature-head h2 { font-family: var(--f-display); font-weight: 500; font-size: clamp(28px, 3.6vw, 46px); line-height: 1.45; margin: 0; letter-spacing: .06em; text-wrap: balance; }
+.feature-head .meta { font-family: var(--f-latin); font-size: 18px; letter-spacing: .14em; color: var(--mist); }
+.pains { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 72px; }
+.pain { padding: 30px 30px 30px 0; min-width: 0; }
+.pain + .pain { padding-left: 30px; border-left: 1px solid var(--line); }
+.pain b { display: block; font-family: var(--f-display); font-weight: 500; font-size: 19px; letter-spacing: .06em; margin-bottom: 8px; }
+.pain p { margin: 0; color: var(--mist); font-size: 14px; }
+.pain .q { font-family: var(--f-latin); font-size: 13px; letter-spacing: .24em; color: var(--gold); display: block; margin-bottom: 10px; }
+@media (max-width: 820px) { .pains { grid-template-columns: minmax(0, 1fr); } .pain, .pain + .pain { padding: 24px 0; border-left: 0; } .pain + .pain { border-top: 1px solid var(--line); } }
+
+.showcase { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 56px; align-items: start; }
+.tabs { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.tab { all: unset; cursor: pointer; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 6px 10px; padding: 22px 4px; border-bottom: 1px solid var(--line); position: relative; }
+.tab::before { content: ""; position: absolute; left: 0; bottom: -1px; height: 1px; width: 0; background: var(--sky); transition: width .9s var(--ease); }
+.tab[aria-selected="true"]::before { width: 100%; }
+.tab .n { font-family: var(--f-latin); font-size: 16px; color: var(--mist); letter-spacing: .1em; padding-top: 2px; }
+.tab .t { font-family: var(--f-display); font-size: 18px; letter-spacing: .06em; color: var(--mist); transition: color .3s; }
+.tab .d { grid-column: 2; font-size: 13.5px; line-height: 1.8; color: var(--mist); max-height: 0; overflow: hidden; opacity: 0; transition: max-height .6s var(--ease), opacity .6s var(--ease); }
+.tab[aria-selected="true"] .t, .tab:hover .t { color: var(--ivory); }
+.tab[aria-selected="true"] .n { color: var(--sky); }
+.tab[aria-selected="true"] .d { max-height: 160px; opacity: 1; }
+.tab:focus-visible { outline: 1px solid var(--sky); outline-offset: -1px; }
+
+.stage { position: relative; min-width: 0; }
+.browser { border-radius: 10px; overflow: hidden; background: #F4F6FA; box-shadow: 0 40px 90px -30px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.06); }
+.browser-bar { height: 34px; background: #E3E8F0; display: flex; align-items: center; gap: 7px; padding: 0 14px; }
+.browser-bar i { width: 10px; height: 10px; border-radius: 50%; background: #C3CBD8; }
+.browser-bar span { margin-left: 14px; font-size: 11px; color: #5B6680; letter-spacing: .04em; background: #F4F6FA; padding: 2px 14px; border-radius: 999px; }
+.screen { position: relative; aspect-ratio: 16 / 10.4; background: #F4F6FA; }
+.screen img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center top; padding: 14px; opacity: 0; transform: scale(1.015); transition: opacity .7s var(--ease), transform 1.2s var(--ease); }
+.screen img.on { opacity: 1; transform: none; }
+.phone { position: absolute; right: -28px; bottom: -48px; width: 150px; border-radius: 26px; padding: 8px; background: var(--ink); box-shadow: 0 30px 60px -20px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.08); }
+.phone img { border-radius: 19px; width: 100%; }
+.stage-note { margin-top: 18px; font-size: 12px; color: var(--mist); letter-spacing: .08em; }
+@media (max-width: 960px) {
+  .showcase { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .phone { width: 110px; right: 4px; bottom: -36px; }
+}
+
+.points { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; margin-top: 110px; }
+.point { border-top: 1px solid var(--line); padding-top: 22px; min-width: 0; }
+.point b { display: block; font-weight: 500; font-size: 15.5px; letter-spacing: .06em; margin-bottom: 6px; }
+.point p { margin: 0; color: var(--mist); font-size: 13.5px; }
+@media (max-width: 900px) { .points { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .points { grid-template-columns: minmax(0, 1fr); } }
+
+.sides { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; }
+.side { overflow: hidden; border: 1px solid var(--line); border-radius: 4px; padding: clamp(30px, 4vw, 48px); background: linear-gradient(160deg, rgba(24,48,92,.5), rgba(10,24,52,.15)); min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.side-k { font-family: var(--f-latin); font-style: italic; font-size: 20px; color: var(--sky); letter-spacing: .08em; }
+.side h3 { font-family: var(--f-display); font-weight: 500; font-size: clamp(22px, 2.4vw, 30px); margin: 0; letter-spacing: .08em; }
+.side-lead { margin: 0; color: var(--mist); }
+.side ul { list-style: none; padding: 0; margin: 10px 0 0; border-top: 1px solid var(--line); }
+.side li { padding: 18px 0 18px 30px; border-bottom: 1px solid var(--line); position: relative; color: var(--mist); font-size: 13.5px; }
+.side li::before { content: ""; position: absolute; left: 2px; top: 25px; width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--sky); }
+.side li b { display: block; color: var(--ivory); font-weight: 500; font-size: 15.5px; letter-spacing: .04em; margin-bottom: 2px; }
+@media (max-width: 860px) { .sides { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- inside sales ---------- */
+.statement { position: relative; overflow: hidden; padding-block: clamp(96px, 13vw, 170px); background: var(--ink); }
+.statement canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .9; }
+.statement .wrap { position: relative; }
+.statement .kicker { font-family: var(--f-latin); font-size: 15px; letter-spacing: .3em; color: var(--gold); text-transform: uppercase; }
+.statement h2 { font-family: var(--f-display); font-weight: 500; font-size: clamp(30px, 5vw, 66px); line-height: 1.5; letter-spacing: .06em; margin: 26px 0 0; text-wrap: balance; }
+.statement h2 em { font-style: normal; color: var(--sky); }
+.statement p { color: var(--mist); max-width: 36em; margin: 34px 0 0; font-size: 15.5px; }
+.statement .sig { margin-top: 44px; display: flex; align-items: center; gap: 18px; font-family: var(--f-latin); font-size: 18px; letter-spacing: .12em; color: var(--ivory); }
+.statement .sig::before { content: ""; width: 56px; height: 1px; background: var(--gold); }
+
+.promise { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-bottom: 96px; }
+.promise > div { padding: 34px 30px 32px; border: 1px solid var(--line); border-radius: 4px; min-width: 0; background: rgba(10,24,52,.35); }
+.promise .k { font-family: var(--f-latin); font-size: 46px; line-height: 1; color: var(--sky); font-weight: 400; }
+.promise .k small { font-family: var(--f-body); font-size: 14px; color: var(--ivory); margin-left: 6px; letter-spacing: .1em; }
+.promise b { display: block; font-family: var(--f-display); font-weight: 500; font-size: 19px; letter-spacing: .06em; margin: 20px 0 8px; }
+.promise p { margin: 0; color: var(--mist); font-size: 14px; }
+@media (max-width: 860px) { .promise { grid-template-columns: minmax(0, 1fr); } }
+
+.portal { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 64px; align-items: center; margin-bottom: 110px; }
+.portal h3 { font-family: var(--f-display); font-weight: 500; font-size: clamp(22px, 2.6vw, 32px); line-height: 1.6; margin: 14px 0 0; letter-spacing: .06em; }
+.portal ul { list-style: none; padding: 0; margin: 26px 0 0; display: flex; flex-direction: column; gap: 12px; }
+.portal li { position: relative; padding-left: 26px; color: var(--mist); font-size: 14.5px; }
+.portal li::before { content: ""; position: absolute; left: 0; top: .78em; width: 9px; height: 9px; border-radius: 50%; border: 1px solid var(--sky); }
+.screen.full { aspect-ratio: 16 / 10; }
+.screen.full img { padding: 0; object-fit: cover; }
+.seg { display: inline-flex; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 999px; margin-bottom: 18px; }
+.seg button { all: unset; cursor: pointer; font-size: 13px; letter-spacing: .1em; padding: 7px 20px; border-radius: 999px; color: var(--mist); transition: background .35s, color .35s; }
+.seg button[aria-selected="true"] { background: var(--ivory); color: var(--ink); }
+.seg button:focus-visible { outline: 1px solid var(--sky); outline-offset: 2px; }
+.mock { border-radius: 10px; overflow: hidden; background: #F4F6FA; color: #14213D; box-shadow: 0 40px 90px -30px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.06); font-size: 12px; letter-spacing: .02em; line-height: 1.6; min-width: 0; }
+.mock-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 18px; background: #fff; border-bottom: 1px solid #E3E8F0; }
+.mock-top b { font-size: 14px; }
+.mock-top span { color: #5B6680; font-size: 11px; }
+.mock-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 12px; }
+.kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.kpis div { background: #fff; border: 1px solid #E3E8F0; border-radius: 8px; padding: 10px 12px; }
+.kpis small { display: block; color: #5B6680; font-size: 10.5px; }
+.kpis strong { font-size: 20px; font-variant-numeric: tabular-nums; }
+.kpis .warn strong { color: #A15C00; }
+.mock-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #E3E8F0; border-radius: 8px; overflow: hidden; font-variant-numeric: tabular-nums; }
+.mock-table th, .mock-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #EDF0F5; white-space: nowrap; }
+.mock-table th { font-size: 10.5px; color: #5B6680; font-weight: 500; background: #F8F9FB; }
+.pill { display: inline-block; font-size: 10.5px; padding: 1px 9px; border-radius: 999px; font-weight: 500; }
+.p-win { background: #D7EFE3; color: #155C3B; }
+.p-done { background: #DCE8F7; color: #1D4F8F; }
+.p-todo { background: #FCEFD2; color: #7A4A00; }
+.p-res { background: #ECEEF2; color: #4A5468; }
+.mock-scroll { overflow-x: auto; }
+.mock-cap { font-size: 12px; color: var(--mist); letter-spacing: .08em; margin-top: 14px; }
+@media (max-width: 900px) { .portal { grid-template-columns: minmax(0, 1fr); gap: 40px; } }
+
+.flow { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); counter-reset: s; border-top: 1px solid var(--line); }
+.flow li { counter-increment: s; padding: 26px 20px 8px 0; position: relative; min-width: 0; }
+.flow li::before { content: counter(s, decimal-leading-zero); display: block; font-family: var(--f-latin); font-size: 30px; color: var(--sky); line-height: 1; margin-bottom: 16px; }
+.flow li::after { content: ""; position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: var(--sky); }
+.flow b { display: block; font-weight: 500; font-size: 15px; letter-spacing: .04em; margin-bottom: 6px; }
+.flow p { margin: 0; font-size: 13px; color: var(--mist); line-height: 1.8; }
+.flow li:last-child b { color: var(--sky); }
+@media (max-width: 1000px) { .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 20px; } }
+@media (max-width: 560px) { .flow { grid-template-columns: minmax(0, 1fr); } .flow li { padding-right: 0; } }
+
+/* ---------- company ---------- */
+.company { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 40px 72px; }
+.c-table { width: 100%; border-collapse: collapse; }
+.c-table th, .c-table td { text-align: left; vertical-align: top; padding: 22px 0; border-bottom: 1px solid var(--line); font-weight: 400; }
+.c-table th { width: 160px; color: var(--mist); font-size: 13.5px; letter-spacing: .12em; padding-right: 24px; }
+.c-table tr:first-child th, .c-table tr:first-child td { border-top: 1px solid var(--line); }
+.ph { color: var(--gold); }
+@media (max-width: 880px) { .company { grid-template-columns: minmax(0, 1fr); } .c-table th { width: 110px; } }
+
+/* ---------- contact ---------- */
+.contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.c-link { all: unset; cursor: pointer; display: flex; flex-direction: column; gap: 10px; padding: 40px 32px 40px 0; position: relative; transition: background .5s var(--ease); min-width: 0; }
+.c-link + .c-link { padding-left: 32px; border-left: 1px solid var(--line); }
+.c-link .en { font-family: var(--f-latin); font-size: 15px; letter-spacing: .28em; color: var(--gold); }
+.c-link b { font-family: var(--f-display); font-weight: 500; font-size: 21px; letter-spacing: .06em; }
+.c-link span:last-child { color: var(--mist); font-size: 13.5px; }
+.c-link .go { position: absolute; right: 32px; top: 42px; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; transition: border-color .4s, background .4s; }
+.c-link:first-child .go { right: 32px; }
+.c-link .go::after { content: ""; width: 7px; height: 7px; border-top: 1px solid var(--ivory); border-right: 1px solid var(--ivory); transform: translateX(-2px) rotate(45deg); }
+.c-link:hover .go, .c-link[aria-pressed="true"] .go { border-color: var(--sky); background: rgba(163,200,235,.12); }
+.c-link[aria-pressed="true"] b { color: var(--sky); }
+.c-link:focus-visible { outline: 1px solid var(--sky); outline-offset: -1px; }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } .c-link, .c-link + .c-link { padding: 30px 60px 30px 0; border-left: 0; } .c-link + .c-link { border-top: 1px solid var(--line); } .c-link .go, .c-link:first-child .go { right: 0; top: 32px; } }
+
+.form { margin-top: 64px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 32px; }
+.field { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: 13px; letter-spacing: .12em; color: var(--mist); }
+.field label i { font-style: normal; color: var(--gold); margin-left: 8px; font-size: 11px; }
+.field input, .field select, .field textarea { font: inherit; color: var(--ivory); background: transparent; border: 0; border-bottom: 1px solid var(--line); padding: 10px 0; border-radius: 0; transition: border-color .3s; width: 100%; }
+.field select option { background: var(--navy-2); }
+.field textarea { min-height: 120px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--sky); }
+.form-foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; margin-top: 10px; }
+.form-foot button { cursor: pointer; border: 0; font: inherit; }
+.form-msg { font-size: 13.5px; color: var(--sky); }
+@media (max-width: 640px) { .form { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- footer ---------- */
+.foot { background: var(--ink); padding-block: 72px 40px; border-top: 1px solid var(--line); }
+.foot-in { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; }
+.foot .tag { font-family: var(--f-display); font-size: 18px; letter-spacing: .1em; margin: 18px 0 0; color: var(--mist); }
+.foot nav { display: grid; grid-template-columns: repeat(2, auto); gap: 12px 56px; }
+.foot nav a { text-decoration: none; font-size: 13px; letter-spacing: .1em; color: var(--mist); }
+.foot nav a:hover { color: var(--ivory); }
+.copy { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); font-family: var(--f-latin); font-size: 13px; letter-spacing: .16em; color: var(--mist); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition-duration: .01ms !important; }
+  .pending { opacity: 1; transform: none; }
+}
+</style>
+
+</head>
+<body>
+<header class="site-head" id="head">
+  <div class="wrap head-in">
+    <a class="brand" href="#top" aria-label="CaCHI トップへ">
+      <span class="brand-mark"><img src="/images/logo.webp" alt=""></span>
+      <span class="brand-name">CaCHI</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="メニュー" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="メイン">
+      <a href="#about">About</a>
+      <a href="#service">Service</a>
+      <a href="#platform">Platform</a>
+      <a href="#inside-sales">Inside Sales</a>
+      <a href="#company">Company</a>
+      <a class="btn-line" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO: the logo's circles drift in from the dark and assemble; the blue core lights last -->
+  <section class="hero" aria-label="CaCHI">
+    <canvas id="cluster" aria-hidden="true"></canvas>
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="nocase">CaCHI</span><span class="long">&nbsp;— Creating value beyond today</span></p>
+        <h1>
+          <span class="ln" data-split>今以上の</span>
+          <span class="ln" data-split><em>更なる価値</em>を</span>
+          <span class="ln" data-split>創出する。</span>
+        </h1>
+        <p class="hero-lead">取引先、世の中、そして事業に関わるすべての人へ。<br>現状に満足することなく、新たな価値を届け続けます。</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#service">サービスを見る <span class="arr"></span></a>
+          <a class="btn btn-ghost" href="#contact">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">SCROLL<i></i></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="band" id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 class="sec-label">About<small>CaCHIについて</small></h2>
+        <div>
+          <p class="sec-title">今以上の更なる価値を創出し、<br>共に未来を築く。</p>
+          <p class="sec-text">株式会社CaCHIは、「今以上の更なる価値を創出する」ことをミッションに掲げています。産業廃棄物の処理という社会インフラを根底から支える領域で、独自のネットワークとスキームを駆使し、これまでにない架け橋となります。</p>
+          <p class="sec-text">取引先さま、社会全体、そして当社のメンバー。事業に携わるすべての人々に確かな「価値」を提供し続けることで、持続可能で豊かな未来の実現に貢献します。</p>
+        </div>
+      </div>
+      <div class="mv reveal">
+        <div class="mv-item">
+          <span class="mv-k">Mission</span>
+          <h3>今以上の、<br>更なる価値を創出する。</h3>
+          <p>現状に満足することなく、常に「今以上」を追求するプロフェッショナル集団であること。事業に関わるすべての人々に確かな「価値」を提供し続けることが、私たちの使命です。</p>
+        </div>
+        <div class="mv-item">
+          <span class="mv-k">Vision</span>
+          <h3>単なる仲介やマッチングを超え、<br>業界の新しい架け橋へ。</h3>
+          <p>取引先企業の発展、世の中の環境課題の解決、そしてメンバーの自己実現。そのすべてを同時に叶える存在として、産業廃棄物業界の当たり前を更新していきます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO BAND -->
+  <section class="photo-band" aria-label="産業廃棄物の処理を支える">
+    <img src="/images/ph_plant.webp" alt="中間処理場の設備と敷地" loading="lazy">
+    <div class="wrap photo-band-in reveal">
+      <p class="eyebrow">Social Infrastructure</p>
+      <p class="pb-title">社会インフラを根底から支える領域で、<br>これまでにない架け橋に。</p>
+    </div>
+  </section>
+
+  <!-- SERVICE OVERVIEW -->
+  <section class="band band-raised" id="service">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 class="sec-label">Service<small>事業内容</small></h2>
+        <div>
+          <p class="sec-title">ふたつの事業で、<br>取引先の成長と社会を支える。</p>
+        </div>
+      </div>
+      <div class="svc-grid">
+        <a class="svc-card reveal" href="#platform">
+          <span class="svc-img"><img src="/images/plants.webp" alt="" loading="lazy"></span>
+          <span class="svc-no">SERVICE 01</span>
+          <h3>産業廃棄物プラットフォーム</h3>
+          <span class="en">Waste Management Platform</span>
+          <p>排出事業者さまと中間処理場さまを結ぶマッチングプラットフォーム。「いつでも、どこでも、安く」処分できる環境と、処理場の空きリソースの有効活用を同時に実現します。</p>
+          <div class="svc-tags"><span>排出事業者さま向け</span><span>中間処理場さま向け</span><span>ボリュームディスカウント</span><span>窓口業務の代行</span><span>管理システム</span></div>
+          <span class="svc-more">詳しく見る <span class="btn"><span class="arr"></span></span></span>
+        </a>
+        <a class="svc-card reveal" href="#inside-sales">
+          <span class="svc-img"><img src="/images/cn_appts.webp" alt="" loading="lazy" style="object-position:left top"></span>
+          <span class="svc-no">SERVICE 02</span>
+          <h3>インサイドセールス・パートナーズ</h3>
+          <span class="en">Inside Sales Partners</span>
+          <p>テレアポ代行を完全成果報酬で。獲得したアポイントと商談結果は専用システム「CallNexus」で共有し、成果が出た分だけをご請求します。</p>
+          <div class="svc-tags"><span>テレアポ代行</span><span>完全成果報酬</span><span>専用システムで結果を共有</span><span>利用料金の見える化</span></div>
+          <span class="svc-more">詳しく見る <span class="btn"><span class="arr"></span></span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE 01: PLATFORM -->
+  <section class="band" id="platform">
+    <div class="wrap">
+      <div class="feature-head reveal">
+        <h2>排出事業者と中間処理場を結ぶ、<br>産業廃棄物プラットフォーム。</h2>
+        <span class="meta">SERVICE 01 ／ Waste Management Platform</span>
+      </div>
+
+      <p class="sec-text reveal" style="margin:-12px 0 56px">CaCHIは複数の排出事業者さまを取りまとめ、中間処理場さまの非稼働リソースと結びつけます。双方の課題を同時に解決する、Win-Winのネットワークです。</p>
+
+      <div class="sides reveal">
+        <div class="side">
+          <figure class="side-img"><img src="/images/ph_emitter.webp" alt="図面に書き込みをする建設現場の担当者" loading="lazy"></figure>
+          <span class="side-k">For Emitters</span>
+          <h3>排出事業者さま</h3>
+          <p class="side-lead">「いつでも、どこでも、安く」処分できる環境を。複数の排出事業者さまを取りまとめることで、単独では難しいボリュームディスカウントを実現します。</p>
+          <ul>
+            <li><b>いつでも、どこでも、安く処分</b>現場の近くの処分場を比較し、その場で回収を依頼できます。</li>
+            <li><b>ボリュームディスカウント</b>複数企業の取りまとめにより、単独では届かない単価を実現します。</li>
+            <li><b>手配と窓口をワンストップに</b>処理の手配から実績管理まで、窓口はCaCHIひとつです。</li>
+          </ul>
+        </div>
+        <div class="side">
+          <figure class="side-img"><img src="/images/ph_plant_r.webp" alt="中間処理場の設備" loading="lazy"></figure>
+          <span class="side-k">For Processors</span>
+          <h3>中間処理場さま</h3>
+          <p class="side-lead">空いているリソースを最大限に活かすために。案件の調整や窓口業務はすべてCaCHIが担うので、人員や体制を変えずに収益の最大化を図れます。</p>
+          <ul>
+            <li><b>空きリソースの有効活用</b>非稼働の処理能力を、新たな収益源に変えます。</li>
+            <li><b>窓口業務の代行</b>問い合わせや案件調整をCaCHIが担い、現場の負担を減らします。</li>
+            <li><b>体制はそのまま、安定した案件</b>現在の体制を変えずに、継続的な案件を獲得できます。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature-head reveal" style="margin:96px 0 36px">
+        <h2 style="font-size:clamp(22px,2.6vw,32px)">排出事業者さま向け管理システム「産廃KANRI」</h2>
+        <span class="meta">System</span>
+      </div>
+      <p class="sec-text reveal" style="margin:-8px 0 44px">処分場探しから回収依頼、案件の進捗、廃棄実績と費用の管理まで。電話と紙と表計算に頼っていた業務を、ひとつの画面にまとめます。</p>
+
+      <div class="showcase reveal">
+        <div class="tabs" role="tablist" aria-label="システムの機能">
+          <button class="tab" role="tab" id="tab-plants" aria-selected="true" aria-controls="screen" data-shot="plants" data-url="中間処理場AI"><span class="n">01</span><span class="t">中間処理場AI</span><span class="d">現場住所か現在地から、近くの処分場を距離順に表示。対応品目・目安単価・営業状態・おすすめ度を一覧で比べられます。</span></button>
+          <button class="tab" role="tab" id="tab-request" aria-selected="false" aria-controls="screen" data-shot="request" data-url="回収依頼"><span class="n">02</span><span class="t">回収依頼</span><span class="d">選んだ処分場へ画面から依頼。現場マスタで担当者・住所を自動入力し、品目と数量は1回で最大5行まで。</span></button>
+          <button class="tab" role="tab" id="tab-board" aria-selected="false" aria-controls="screen" data-shot="board" data-url="案件管理"><span class="n">03</span><span class="t">案件管理</span><span class="d">処分場から回収日時と車両の連絡が入ると自動で反映し、メールでもお知らせ。状態別に一覧で追えます。</span></button>
+          <button class="tab" role="tab" id="tab-waste" aria-selected="false" aria-controls="screen" data-shot="waste" data-url="廃棄管理"><span class="n">04</span><span class="t">廃棄管理</span><span class="d">日付・品目・現場・数量・単価・金額の廃棄履歴を一覧に。チャージ払いなら残額も表示し、少なくなると画面でお知らせ。</span></button>
+          <button class="tab" role="tab" id="tab-analytics" aria-selected="false" aria-controls="screen" data-shot="analytics" data-url="データ分析"><span class="n">05</span><span class="t">データ分析</span><span class="d">処分場別・品目別に合計金額、数量、平均単価を集計。月別の推移をグラフで確認し、CSVで出力できます。</span></button>
+        </div>
+        <div class="stage">
+          <div class="browser">
+            <div class="browser-bar"><i></i><i></i><i></i><span id="urlbar">CaCHI 中間処理管理システム ／ 中間処理場AI</span></div>
+            <div class="screen" id="screen" role="tabpanel" aria-live="polite">
+              <img class="on" data-key="plants" src="/images/plants.webp" alt="中間処理場AIの一覧画面。処分場ごとに距離、目安単価、営業状態、おすすめ度が並ぶ">
+              <img data-key="request" src="/images/request.webp" alt="回収依頼フォーム。現場名、担当者、住所、依頼内容、品目と数量を入力する">
+              <img data-key="board" src="/images/board.webp" alt="案件管理の一覧画面。状態、回収日時、車両、現場名、処分場、品目が並ぶ">
+              <img data-key="waste" src="/images/waste.webp" alt="廃棄管理の画面。合計チャージ金額、使用額、残額のカードと廃棄履歴の表">
+              <img data-key="analytics" src="/images/analytics.webp" alt="データ分析の画面。期間実績と累計実績、処分場別の合計金額グラフ、月別グラフ">
+            </div>
+          </div>
+          <div class="phone"><img src="/images/mobile.webp" alt="スマートフォンで表示した案件管理の画面"></div>
+          <p class="stage-note">実際のシステム画面（表示しているデータはサンプルです）</p>
+        </div>
+      </div>
+
+      <div class="points reveal">
+        <div class="point"><b>スマホ・PCに対応</b><p>インストール不要。ブラウザから現場でも事務所でも使えます。</p></div>
+        <div class="point"><b>自社のデータだけを表示</b><p>企業ごとに分けて管理。他社の依頼や実績は見えません。</p></div>
+        <div class="point"><b>大事な連絡はメールでも</b><p>回収日時の確定や変更は、メールでもお知らせします。</p></div>
+        <div class="point"><b>CaCHIがサポート</b><p>処分場への取次ぎやご相談は、画面からCaCHI窓口へ。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE 02: INSIDE SALES — statement -->
+  <section class="statement" id="inside-sales">
+    <canvas id="orbit" aria-hidden="true"></canvas>
+    <div class="wrap reveal">
+      <p class="kicker">Service 02 ／ Inside Sales Partners</p>
+      <h2>継続して結果を残せる価値を<br>見出せるからこそ、<em>完全成果報酬</em>。</h2>
+      <p>CaCHIのインサイドセールス・パートナーズは、アポイントを獲得できた分だけをご請求する完全成果報酬型のテレアポ代行サービスです。成果が出なければ、お客さまの負担はありません。結果を出し続けられる自信があるから、この料金体系を選んでいます。</p>
+      <p class="sig">Inside Sales Partners — テレアポ代行</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="promise">
+        <div class="reveal"><span class="k">100<small>％成果報酬</small></span><b>獲得したアポイントの分だけ</b><p>お支払いは成果が出た分のみ。料金はアポイント数、または商談数を基準に月単位で計算します。</p></div>
+        <div class="reveal"><span class="k">0<small>円</small></span><b>キャンセルは料金に含めません</b><p>キャンセルになったアポイントは成果に数えません。商談基準の場合はリスケも除いて計算します。</p></div>
+        <div class="reveal"><span class="k">24<small>h</small></span><b>いつでも結果を確認できる</b><p>獲得したアポイント、商談結果、月ごとの利用料金と明細を、専用画面からいつでもご確認いただけます。</p></div>
+      </div>
+
+      <div class="portal">
+        <div class="reveal">
+          <p class="eyebrow">System&nbsp;—&nbsp;<span class="nocase">CallNexus</span></p>
+          <h3>アポイントも料金も、<br>すべてガラス張りに。</h3>
+          <p class="sec-text" style="margin-top:14px">結果はすべて、お客さま専用のシステム「CallNexus」で共有します。</p>
+          <ul>
+            <li>アポイントを登録すると、ご担当者さまへメールでお知らせ</li>
+            <li>今月のアポ数・商談数・記入が必要な件数をひと目で確認</li>
+            <li>商談後はステータスとメモを記入するだけ。その内容で商談数と料金が確定</li>
+            <li>商談日を過ぎて未記入のアポイントは、毎朝まとめてリマインド</li>
+            <li>表示されるのは貴社のデータだけ</li>
+          </ul>
+        </div>
+        <div class="stage reveal" id="cnStage">
+          <div class="seg" role="tablist" aria-label="CallNexusの画面">
+            <button role="tab" aria-selected="true" aria-controls="cnScreen" data-key="cn_appts">アポ管理</button>
+            <button role="tab" aria-selected="false" aria-controls="cnScreen" data-key="cn_billing">利用料金</button>
+          </div>
+          <div class="browser">
+            <div class="browser-bar"><i></i><i></i><i></i><span>CallNexus ／ お客さま専用画面</span></div>
+            <div class="screen full" id="cnScreen" role="tabpanel">
+              <img class="on" data-key="cn_appts" src="/images/cn_appts.webp" alt="CallNexusのアポ管理画面。今月のアポ、商談数、記入が必要な件数と、アポの一覧（取得日、企業名、商談日時、ステータス、メモ）">
+              <img data-key="cn_billing" src="/images/cn_billing.webp" alt="CallNexusの利用料金画面。今月の利用料金、アポ数、商談数と、サービス別の明細、月別の推移">
+            </div>
+          </div>
+          <div class="phone"><img src="/images/cn_mobile.webp" alt="スマートフォンで表示したCallNexusのアポ管理画面"></div>
+          <p class="stage-note">実際のシステム画面（表示しているデータはサンプルです）</p>
+        </div>
+      </div>
+
+      <div class="feature-head reveal" style="margin-bottom:36px">
+        <h2 style="font-size:clamp(24px,2.8vw,34px)">ご依頼から成果のご請求まで</h2>
+        <span class="meta">Flow</span>
+      </div>
+      <ol class="flow reveal">
+        <li><b>ヒアリング</b><p>商材、ターゲット、獲得したい商談の条件を伺います。</p></li>
+        <li><b>設計</b><p>架電リストとトークスクリプトを設計します。</p></li>
+        <li><b>架電・アポ獲得</b><p>専任のメンバーがアポイントを獲得します。</p></li>
+        <li><b>アポ登録・通知</b><p>専用画面に登録し、ご担当者さまへメールでお知らせ。</p></li>
+        <li><b>商談・結果記入</b><p>商談後、ステータスとメモを画面でご記入いただきます。</p></li>
+        <li><b>成果分のみご請求</b><p>月ごとに成果を集計し、成果が出た分だけをご請求します。</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- COMPANY -->
+  <section class="band band-raised" id="company">
+    <div class="wrap company">
+      <div class="reveal">
+        <h2 class="sec-label">Company<small>会社概要</small></h2>
+      </div>
+      <table class="c-table reveal">
+        <tr><th>会社名</th><td>株式会社CaCHI（カチ）<br><span style="color:var(--mist);font-family:var(--f-latin);letter-spacing:.1em">CaCHI Co., Ltd.</span></td></tr>
+        <tr><th>設立</th><td>2025年11月</td></tr>
+        <tr><th>代表取締役</th><td>虎口 大地</td></tr>
+        <tr><th>所在地</th><td>〒134-0083<br>東京都江戸川区中葛西7-9-23</td></tr>
+        <tr><th>事業内容</th><td>産業廃棄物マッチングプラットフォームの開発・運営<br>環境コンサルティング<br>インサイドセールス事業（テレアポ代行）</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="band" id="contact">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 class="sec-label">Contact<small>お問い合わせ</small></h2>
+        <div>
+          <p class="sec-title">導入のご相談やデモのご依頼は、<br>お気軽にお問い合わせください。</p>
+        </div>
+      </div>
+      <div class="contact-grid reveal" role="group" aria-label="お問い合わせの種類">
+        <button class="c-link" type="button" data-topic="platform" aria-pressed="false"><span class="en">PLATFORM</span><b>産業廃棄物プラットフォーム</b><span>排出事業者さま・中間処理場さまのご相談</span><span class="go"></span></button>
+        <button class="c-link" type="button" data-topic="sales" aria-pressed="false"><span class="en">INSIDE SALES</span><b>インサイドセールス・パートナーズ</b><span>テレアポ代行・お見積りのご相談</span><span class="go"></span></button>
+        <button class="c-link" type="button" data-topic="other" aria-pressed="false"><span class="en">OTHERS</span><b>その他のお問い合わせ</b><span>取材・協業・採用など</span><span class="go"></span></button>
+      </div>
+      <form class="form reveal" id="form" novalidate>
+        <div class="field full">
+          <label for="f-topic">お問い合わせの種類<i>必須</i></label>
+          <select id="f-topic" required>
+            <option value="">選択してください</option>
+            <option value="platform">産業廃棄物プラットフォーム（排出事業者さま・中間処理場さま）</option>
+            <option value="sales">インサイドセールス・パートナーズ（テレアポ代行）</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-company">会社名<i>必須</i></label><input id="f-company" required autocomplete="organization"></div>
+        <div class="field"><label for="f-name">お名前<i>必須</i></label><input id="f-name" required autocomplete="name"></div>
+        <div class="field"><label for="f-mail">メールアドレス<i>必須</i></label><input id="f-mail" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="f-tel">電話番号</label><input id="f-tel" type="tel" autocomplete="tel"></div>
+        <div class="field full"><label for="f-body">お問い合わせ内容</label><textarea id="f-body"></textarea></div>
+        <div class="hp-field" aria-hidden="true" style="position:absolute;left:-9999px"><label for="f-website">Website</label><input id="f-website" tabindex="-1" autocomplete="off"></div>
+        <div class="form-foot">
+          <button class="btn btn-solid" type="submit" id="f-submit">送信する <span class="arr"></span></button>
+          <span class="form-msg" id="formMsg" role="status"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <a class="brand" href="#top"><span class="brand-mark"><img src="/images/logo.webp" alt=""></span><span class="brand-name">CaCHI</span></a>
+        <p class="tag">今以上の更なる価値を創出する。</p>
+        <p style="margin:14px 0 0;color:var(--mist);font-size:13px">株式会社CaCHI<br>〒134-0083 東京都江戸川区中葛西7-9-23</p>
+      </div>
+      <nav aria-label="フッター">
+        <a href="#about">CaCHIについて</a>
+        <a href="#platform">産業廃棄物プラットフォーム</a>
+        <a href="#service">事業内容</a>
+        <a href="#inside-sales">インサイドセールス・パートナーズ</a>
+        <a href="#company">会社概要</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+    <p class="copy">© 2026 CaCHI Co., Ltd.</p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Circles traced from the CaCHI logo: [x, y, r] in 0..1 of the mark, k = shade (k: deep, g: slate, l: ivory, b: core)
+  const LOGO = [[0.304,0.572,0.089,"k"],[0.505,0.405,0.07,"k"],[0.237,0.284,0.067,"k"],[0.71,0.398,0.066,"k"],[0.118,0.525,0.061,"k"],[0.435,0.708,0.059,"k"],[0.573,0.748,0.055,"k"],[0.706,0.712,0.053,"k"],[0.924,0.536,0.049,"k"],[0.083,0.648,0.048,"k"],[0.643,0.186,0.043,"k"],[0.761,0.112,0.033,"k"],[0.03,0.47,0.033,"k"],[0.913,0.716,0.033,"k"],[0.173,0.807,0.033,"k"],[0.609,0.956,0.033,"k"],[0.939,0.352,0.032,"k"],[0.805,0.691,0.032,"k"],[0.467,0.03,0.032,"k"],[0.552,0.108,0.032,"k"],[0.391,0.441,0.032,"k"],[0.812,0.852,0.032,"k"],[0.355,0.898,0.032,"k"],[0.222,0.142,0.03,"k"],[0.528,0.97,0.029,"k"],[0.721,0.917,0.028,"k"],[0.801,0.208,0.022,"k"],[0.435,0.259,0.089,"g"],[0.467,0.837,0.07,"g"],[0.603,0.5,0.066,"g"],[0.829,0.439,0.056,"g"],[0.213,0.462,0.055,"g"],[0.33,0.742,0.053,"g"],[0.558,0.201,0.046,"g"],[0.116,0.267,0.046,"g"],[0.742,0.794,0.038,"g"],[0.71,0.256,0.037,"g"],[0.708,0.076,0.033,"g"],[0.287,0.089,0.033,"g"],[0.387,0.125,0.033,"g"],[0.915,0.29,0.033,"g"],[0.152,0.697,0.033,"g"],[0.116,0.784,0.033,"g"],[0.907,0.612,0.032,"g"],[0.471,0.96,0.032,"g"],[0.723,0.189,0.032,"g"],[0.49,0.636,0.032,"g"],[0.913,0.441,0.031,"g"],[0.579,0.036,0.03,"g"],[0.816,0.157,0.03,"g"],[0.167,0.161,0.03,"g"],[0.943,0.663,0.03,"g"],[0.287,0.922,0.03,"g"],[0.433,0.076,0.026,"g"],[0.867,0.693,0.024,"g"],[0.683,0.788,0.022,"g"],[0.072,0.362,0.021,"g"],[0.222,0.794,0.021,"g"],[0.501,0.752,0.021,"g"],[0.7,0.835,0.02,"g"],[0.77,0.576,0.089,"l"],[0.603,0.633,0.065,"l"],[0.311,0.405,0.059,"l"],[0.152,0.373,0.056,"l"],[0.313,0.17,0.056,"l"],[0.628,0.841,0.056,"l"],[0.818,0.316,0.055,"l"],[0.636,0.305,0.054,"l"],[0.833,0.775,0.049,"l"],[0.226,0.695,0.046,"l"],[0.309,0.839,0.046,"l"],[0.482,0.119,0.042,"l"],[0.645,0.093,0.037,"l"],[0.541,0.913,0.032,"l"],[0.74,0.862,0.032,"l"],[0.852,0.205,0.032,"l"],[0.968,0.47,0.032,"l"],[0.036,0.587,0.032,"l"],[0.387,0.047,0.03,"l"],[0.04,0.4,0.03,"l"],[0.201,0.867,0.03,"l"],[0.398,0.951,0.03,"l"],[0.156,0.625,0.027,"l"],[0.52,0.064,0.025,"l"],[0.129,0.197,0.024,"l"],[0.951,0.405,0.024,"l"],[0.863,0.64,0.024,"l"],[0.106,0.72,0.024,"l"],[0.459,0.54,0.072,"b"]];
+  const SHADE = { k: [6, 13, 31], g: [96, 101, 112], l: [226, 221, 208], b: [163, 200, 235] };
+
+  /* ---------- header ---------- */
+  const head = document.getElementById('head');
+  const onScroll = () => head.classList.toggle('scrolled', scrollY > 30);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  const menuBtn = document.getElementById('menuBtn');
+  menuBtn.addEventListener('click', () => {
+    const open = head.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', () => { head.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); }));
+
+  /* ---------- split headline into characters ---------- */
+  let ci = 0;
+  document.querySelectorAll('[data-split]').forEach(line => {
+    const walk = node => {
+      [...node.childNodes].forEach(n => {
+        if (n.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          [...n.textContent].forEach(c => { const s = document.createElement('span'); s.className = 'ch'; s.style.setProperty('--i', ci++); s.textContent = c; frag.appendChild(s); });
+          n.replaceWith(frag);
+        } else walk(n);
+      });
+    };
+    walk(line);
+  });
+
+  /* ---------- hero: assembling logo ---------- */
+  const cv = document.getElementById('cluster');
+  const ctx = cv.getContext('2d');
+  let W = 0, H = 0, DPR = 1, cx = 0, cy = 0, S = 0;
+  const pts = LOGO.map(([x, y, r, k], i) => ({ x, y, r, k, i,
+    sx: Math.random(), sy: Math.random(), sr: 0.2 + Math.random() * 0.6,
+    ph: Math.random() * Math.PI * 2, sp: 0.4 + Math.random() * 0.8,
+    d: Math.hypot(x - .5, y - .5) }));
+  const dust = Array.from({ length: 90 }, () => ({ x: Math.random(), y: Math.random(), r: Math.random() * 1.6 + .3, v: Math.random() * .00012 + .00004, a: Math.random() * .5 + .1 }));
+  const mouse = { x: -9999, y: -9999, tx: 0, ty: 0, px: 0, py: 0 };
+  function layout() {
+    DPR = Math.min(devicePixelRatio || 1, 2);
+    const r = cv.getBoundingClientRect(); W = r.width; H = r.height;
+    cv.width = W * DPR; cv.height = H * DPR; ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    if (W > 880) { S = Math.min(H * .78, W * .46, 640); cx = W * .72; cy = H * .5; }
+    else { S = Math.min(W * .86, 400); cx = W * .5; cy = 96 + S * .5 + 20; }
+  }
+  layout(); addEventListener('resize', layout);
+  cv.parentElement.addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; mouse.tx = (mouse.x / W - .5); mouse.ty = (mouse.y / H - .5); });
+  cv.parentElement.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999; mouse.tx = mouse.ty = 0; });
+  const ease = t => 1 - Math.pow(1 - Math.min(Math.max(t, 0), 1), 4);
+  const t0 = performance.now();
+  let heroVisible = true;
+  new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; }).observe(cv);
+
+  function drawHero(now) {
+    const t = RM ? 99 : (now - t0) / 1000;
+    ctx.clearRect(0, 0, W, H);
+    mouse.px += (mouse.tx - mouse.px) * .05; mouse.py += (mouse.ty - mouse.py) * .05;
+    const scrollK = Math.min(scrollY / (H || 1), 1);   // scatter softly as the hero scrolls away
+    // dust
+    for (const p of dust) {
+      if (!RM) { p.y -= p.v * 16; if (p.y < -0.02) p.y = 1.02; }
+      ctx.fillStyle = `rgba(200,214,236,${p.a * .5})`;
+      ctx.beginPath(); ctx.arc(p.x * W, p.y * H, p.r, 0, 6.283); ctx.fill();
+    }
+    // constellation: faint lines between nearby particles
+    ctx.lineWidth = 1;
+    for (let a = 0; a < dust.length; a++) for (let b = a + 1; b < dust.length; b++) {
+      const dx = (dust[a].x - dust[b].x) * W, dy = (dust[a].y - dust[b].y) * H, d = dx * dx + dy * dy;
+      if (d < 14400) { ctx.strokeStyle = `rgba(140,170,220,${(1 - d / 14400) * .16})`; ctx.beginPath(); ctx.moveTo(dust[a].x * W, dust[a].y * H); ctx.lineTo(dust[b].x * W, dust[b].y * H); ctx.stroke(); }
+    }
+    // slow halo behind the mark
+    const halo = ctx.createRadialGradient(cx, cy, 0, cx, cy, S * .75);
+    halo.addColorStop(0, 'rgba(150,155,165,.10)'); halo.addColorStop(1, 'rgba(150,155,165,0)');
+    ctx.fillStyle = halo; ctx.beginPath(); ctx.arc(cx, cy, S * .75, 0, 6.283); ctx.fill();
+
+    const rot = Math.sin(t * .12) * .05 + scrollK * .25;
+    const cr = Math.cos(rot), sr = Math.sin(rot);
+    let core = null;
+    for (const p of pts) {
+      const delay = p.k === 'b' ? 2.0 : .15 + p.d * 1.6 + (p.i % 7) * .03;
+      const e = ease((t - delay) / 1.9);
+      // target in canvas space (rotated around centre, with depth parallax)
+      let ox = (p.x - .5) * S, oy = (p.y - .5) * S;
+      const rx = ox * cr - oy * sr, ry = ox * sr + oy * cr;
+      const depth = .4 + p.r * 6;
+      const fx = Math.sin(t * p.sp + p.ph) * 3.2, fy = Math.cos(t * p.sp * .8 + p.ph) * 3.2;
+      let tx = cx + rx * (1 + scrollK * .35) + fx - mouse.px * 30 * depth;
+      let ty = cy + ry * (1 + scrollK * .35) + fy - mouse.py * 30 * depth;
+      // start point: scattered across the hero
+      const sx = p.sx * W, sy = p.sy * H;
+      let x = sx + (tx - sx) * e, y = sy + (ty - sy) * e;
+      let r = (p.r * S) * (p.sr + (1 - p.sr) * e);
+      // gentle repulsion around the pointer
+      const dx = x - mouse.x, dy = y - mouse.y, dd = Math.hypot(dx, dy), R = S * .22;
+      if (dd < R && dd > 0) { const f = (1 - dd / R) ** 2 * 26; x += dx / dd * f; y += dy / dd * f; }
+      if (p.k === 'b') { core = { x, y, r, e }; continue; }
+      const [cR, cG, cB] = SHADE[p.k];
+      const a = (p.k === 'l' ? .92 : p.k === 'g' ? .95 : 1) * (.25 + .75 * e) * (1 - scrollK * .5);
+      ctx.fillStyle = `rgba(${cR},${cG},${cB},${a})`;
+      ctx.beginPath(); ctx.arc(x, y, Math.max(r, .5), 0, 6.283); ctx.fill();
+      if (p.k === 'k') { ctx.strokeStyle = `rgba(150,155,165,${.18 * e})`; ctx.lineWidth = 1; ctx.stroke(); }
+    }
+    if (core && core.e > 0) {
+      const pulse = RM ? 0 : (t * .55) % 1;
+      const g = ctx.createRadialGradient(core.x, core.y, core.r * .6, core.x, core.y, core.r * 3.2);
+      g.addColorStop(0, `rgba(163,200,235,${.45 * core.e})`); g.addColorStop(1, 'rgba(163,200,235,0)');
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(core.x, core.y, core.r * 3.2, 0, 6.283); ctx.fill();
+      if (t > 3.2 && !RM) {
+        ctx.strokeStyle = `rgba(163,200,235,${(1 - pulse) * .5})`; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.arc(core.x, core.y, core.r * (1 + pulse * 2.6), 0, 6.283); ctx.stroke();
+      }
+      ctx.fillStyle = `rgba(163,200,235,${core.e})`;
+      ctx.beginPath(); ctx.arc(core.x, core.y, core.r, 0, 6.283); ctx.fill();
+    }
+  }
+
+  /* ---------- small dot marks on service cards ---------- */
+  const minis = [...document.querySelectorAll('[data-dots]')].map((c, n) => {
+    const s = 240, d = Math.min(devicePixelRatio || 1, 2); c.width = s * d; c.height = s * d;
+    const x = c.getContext('2d'); x.scale(d, d);
+    LOGO.forEach(([px, py, r, k]) => {
+      const col = k === 'b' ? 'rgba(163,200,235,.9)' : k === 'l' ? 'rgba(226,221,208,.16)' : k === 'g' ? 'rgba(150,155,165,.22)' : 'rgba(6,13,31,.55)';
+      x.fillStyle = col; x.beginPath(); x.arc(px * s, py * s, r * s, 0, 6.283); x.fill();
+    });
+    return c;
+  });
+
+  /* ---------- statement: orbiting circles ---------- */
+  const oc = document.getElementById('orbit'), ox = oc.getContext('2d');
+  let OW = 0, OH = 0, orbitVisible = false;
+  const orbs = Array.from({ length: 46 }, (_, i) => ({ a: Math.random() * 6.283, ring: .25 + Math.random() * .9, r: 2 + Math.random() * 22, s: (.02 + Math.random() * .05) * (i % 2 ? 1 : -1), k: ['g', 'l', 'k', 'g'][i % 4] }));
+  function layoutOrbit() { const d = Math.min(devicePixelRatio || 1, 2), r = oc.getBoundingClientRect(); OW = r.width; OH = r.height; oc.width = OW * d; oc.height = OH * d; ox.setTransform(d, 0, 0, d, 0, 0); }
+  layoutOrbit(); addEventListener('resize', layoutOrbit);
+  new IntersectionObserver(([e]) => { orbitVisible = e.isIntersecting; }).observe(oc);
+  function drawOrbit(now) {
+    const t = RM ? 0 : now / 1000;
+    ox.clearRect(0, 0, OW, OH);
+    const ocx = OW > 880 ? OW * .82 : OW * .7, ocy = OH * .5, R = Math.max(OW, OH) * .42;
+    ox.strokeStyle = 'rgba(196,210,233,.07)'; ox.lineWidth = 1;
+    [.35, .6, .85, 1.1].forEach(k => { ox.beginPath(); ox.arc(ocx, ocy, R * k, 0, 6.283); ox.stroke(); });
+    for (const o of orbs) {
+      const a = o.a + t * o.s, x = ocx + Math.cos(a) * R * o.ring, y = ocy + Math.sin(a) * R * o.ring * .92;
+      const [r, g, b] = SHADE[o.k];
+      ox.fillStyle = `rgba(${r},${g},${b},${o.k === 'l' ? .14 : o.k === 'k' ? .9 : .38})`;
+      ox.beginPath(); ox.arc(x, y, o.r, 0, 6.283); ox.fill();
+    }
+    const g = ox.createRadialGradient(ocx, ocy, 0, ocx, ocy, 70);
+    g.addColorStop(0, 'rgba(163,200,235,.55)'); g.addColorStop(.35, 'rgba(163,200,235,.25)'); g.addColorStop(1, 'rgba(163,200,235,0)');
+    ox.fillStyle = g; ox.beginPath(); ox.arc(ocx, ocy, 70, 0, 6.283); ox.fill();
+    ox.fillStyle = 'rgba(163,200,235,.95)'; ox.beginPath(); ox.arc(ocx, ocy, 22 + Math.sin(t * 1.4) * 1.5, 0, 6.283); ox.fill();
+  }
+
+  function frame(now) {
+    if (heroVisible) drawHero(now);
+    if (orbitVisible) drawOrbit(now);
+    if (!RM) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+  if (RM) { drawHero(performance.now()); drawOrbit(0); }
+
+  /* ---------- system screen tabs ---------- */
+  const tabs = [...document.querySelectorAll('.tab')];
+  const shots = [...document.querySelectorAll('#screen img')];
+  const urlbar = document.getElementById('urlbar');
+  let auto = null, idx = 0;
+  function select(i, user) {
+    idx = i;
+    tabs.forEach((t, n) => t.setAttribute('aria-selected', n === i));
+    const key = tabs[i].dataset.shot;
+    shots.forEach(s => s.classList.toggle('on', s.dataset.key === key));
+    urlbar.textContent = 'CaCHI 中間処理管理システム ／ ' + tabs[i].dataset.url;
+    if (user && auto) { clearInterval(auto); auto = null; }
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(i, true));
+    t.addEventListener('keydown', e => {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); const n = (i + 1) % tabs.length; select(n, true); tabs[n].focus(); }
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); const n = (i - 1 + tabs.length) % tabs.length; select(n, true); tabs[n].focus(); }
+    });
+  });
+  if (!RM) {
+    const sc = document.querySelector('.showcase');
+    new IntersectionObserver(([e]) => {
+      if (e.isIntersecting && !auto && sc.dataset.user !== '1') auto = setInterval(() => select((idx + 1) % tabs.length), 5200);
+      else if (!e.isIntersecting && auto) { clearInterval(auto); auto = null; }
+    }, { threshold: .35 }).observe(sc);
+    sc.addEventListener('pointerdown', () => { sc.dataset.user = '1'; });
+  }
+
+  /* ---------- CallNexus screen switch ---------- */
+  const segs = [...document.querySelectorAll('.seg button')];
+  const cnShots = [...document.querySelectorAll('#cnScreen img')];
+  segs.forEach(b => b.addEventListener('click', () => {
+    segs.forEach(x => x.setAttribute('aria-selected', x === b));
+    cnShots.forEach(s => s.classList.toggle('on', s.dataset.key === b.dataset.key));
+  }));
+
+  /* ---------- contact topic shortcuts + form ---------- */
+  const topicSel = document.getElementById('f-topic');
+  const links = [...document.querySelectorAll('.c-link')];
+  const syncLinks = () => links.forEach(l => l.setAttribute('aria-pressed', l.dataset.topic === topicSel.value));
+  links.forEach(l => l.addEventListener('click', () => { topicSel.value = l.dataset.topic; syncLinks(); document.getElementById('f-company').focus({ preventScroll: true }); document.getElementById('form').scrollIntoView({ behavior: RM ? 'auto' : 'smooth', block: 'start' }); }));
+  topicSel.addEventListener('change', syncLinks);
+  document.getElementById('form').addEventListener('submit', e => {
+    e.preventDefault();
+    const msg = document.getElementById('formMsg');
+    const bad = [...e.target.querySelectorAll('[required]')].find(f => !f.value.trim() || (f.type === 'email' && !/^\S+@\S+\.\S+$/.test(f.value)));
+    if (bad) { msg.textContent = (bad.previousElementSibling?.firstChild?.textContent || '必須項目') + 'を入力してください。'; bad.focus(); return; }
+    const btn = document.getElementById('f-submit');
+    const val = id => document.getElementById(id).value.trim();
+    btn.disabled = true; msg.textContent = '送信しています…';
+    fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+      topic: topicSel.options[topicSel.selectedIndex].text, company: val('f-company'), name: val('f-name'),
+      email: val('f-mail'), tel: val('f-tel'), body: val('f-body'), website: val('f-website') }) })
+      .then(r => r.ok ? r.json() : Promise.reject(r))
+      .then(() => { msg.textContent = 'お問い合わせを受け付けました。3営業日以内に担当者よりご連絡いたします。'; e.target.reset(); syncLinks(); })
+      .catch(() => { msg.textContent = '送信できませんでした。時間をおいて再度お試しください。'; })
+      .finally(() => { btn.disabled = false; });
+  });
+
+  /* ---------- scroll reveal (only items below the fold wait) ---------- */
+  if (!RM && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('pending'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal').forEach(el => {
+      if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('pending'); io.observe(el); }
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
