@@ -1,37 +1,31 @@
 # CaCHI コーポレートサイト
 
-株式会社CaCHI（https://cachi.jp/）のコーポレートサイトです。静的HTML＋お問い合わせ用のVercel Function だけで構成しています。
+株式会社CaCHI（https://cachi.jp/）のコーポレートサイトです。ビルド不要の静的HTMLで、Netlify で公開します。
 
 ```
 index.html          … サイト本体（1ページ）
 images/             … 画像（webp）
 logo.png            … ファビコン
-api/contact.js      … お問い合わせフォームの送信（Resend でメール送信）
-vercel.json         … Vercel 設定
+robots.txt / sitemap.xml … 検索エンジン向け
+netlify.toml        … Netlify 設定
 ```
 
-## 公開手順（Vercel）
+## 公開手順（cachi.jp が紐づいている既存の Netlify サイトを使う）
 
-1. Vercel で **Add New → Project** からこのリポジトリ（`cachi-hp`）を Import し、設定は変えずに **Deploy**
-   - Framework Preset は「Other」のままで構いません（ビルド不要）
-2. **Settings → Environment Variables** に以下を登録して再デプロイ
-   | 名前 | 値 |
-   | --- | --- |
-   | `RESEND_API_KEY` | Resend の API キー |
-   | `CONTACT_TO` | お問い合わせの受信アドレス（複数はカンマ区切り） |
-   | `CONTACT_FROM` | 送信元。例 `CaCHI <noreply@cachi.jp>`（Resend で cachi.jp を認証済みであること） |
-3. 発行された `*.vercel.app` の URL で表示とフォーム送信を確認
+ドメインはすでに Netlify につながっているので、DNS の変更は不要です。
 
-## 独自ドメイン（cachi.jp／お名前.com）
+1. Netlify で cachi.jp のサイトを開き、**Site configuration → Build & deploy → Continuous deployment → Link repository**（すでに別のリポジトリにつながっている場合は **Manage repository → Link to a different repository**）
+2. GitHub の `tdaichi-afk/cachi-hp` を選び、Branch は `main`、Build command は空欄、Publish directory は `.` のまま保存
+3. **Deploys** で最新のデプロイが Published になれば cachi.jp に反映
+   - 先に確認したい場合は、新しいサイトとして Import して `*.netlify.app` で確認 → OK なら上の手順で本番サイトに切り替え
 
-1. Vercel の **Settings → Domains** で `cachi.jp` と `www.cachi.jp` を追加（`www` は `cachi.jp` へリダイレクト）
-2. お名前.com の **DNS設定** で次の2行だけ変更（Vercel の画面に表示される値を優先）
-   | ホスト名 | TYPE | VALUE |
-   | --- | --- | --- |
-   | （空欄＝cachi.jp） | A | `76.76.21.21` |
-   | www | CNAME | `cname.vercel-dns.com` |
-3. MX（メール）や TXT のレコードは変更しないでください
-4. 反映後、Vercel の Domains 画面で両方に Valid Configuration が出れば完了（SSL は自動）
+## お問い合わせフォーム（Netlify Forms）
+
+フォームは Netlify Forms で受け付けます（追加のサービスやキーは不要）。
+
+1. 初回デプロイ後、**Forms** に `contact` が表示されることを確認（出ない場合は **Forms → Enable form detection** を押して再デプロイ）
+2. **Site configuration → Notifications → Emails and webhooks → Form submission notifications → Add notification → Email notification** で受信アドレスを登録
+3. サイトからテスト送信し、メールが届くことを確認
 
 ## 検索に表示させる（Google Search Console）
 
