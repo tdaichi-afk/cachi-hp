@@ -639,23 +639,22 @@ section { position: relative; }
         <button class="c-link" type="button" data-topic="sales" aria-pressed="false"><span class="en">INSIDE SALES</span><b>インサイドセールス・パートナーズ</b><span>テレアポ代行・お見積りのご相談</span><span class="go"></span></button>
         <button class="c-link" type="button" data-topic="other" aria-pressed="false"><span class="en">OTHERS</span><b>その他のお問い合わせ</b><span>取材・協業・採用など</span><span class="go"></span></button>
       </div>
-      <form class="form reveal" id="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="website" novalidate>
-        <input type="hidden" name="form-name" value="contact">
+      <form class="form reveal" id="form" novalidate>
         <div class="field full">
           <label for="f-topic">お問い合わせの種類<i>必須</i></label>
-          <select id="f-topic" name="topic" required>
+          <select id="f-topic" required>
             <option value="">選択してください</option>
             <option value="platform">産業廃棄物プラットフォーム（排出事業者さま・中間処理場さま）</option>
             <option value="sales">インサイドセールス・パートナーズ（テレアポ代行）</option>
             <option value="other">その他</option>
           </select>
         </div>
-        <div class="field"><label for="f-company">会社名<i>必須</i></label><input id="f-company" name="company" required autocomplete="organization"></div>
-        <div class="field"><label for="f-name">お名前<i>必須</i></label><input id="f-name" name="name" required autocomplete="name"></div>
-        <div class="field"><label for="f-mail">メールアドレス<i>必須</i></label><input id="f-mail" name="email" type="email" required autocomplete="email"></div>
-        <div class="field"><label for="f-tel">電話番号</label><input id="f-tel" name="tel" type="tel" autocomplete="tel"></div>
-        <div class="field full"><label for="f-body">お問い合わせ内容</label><textarea id="f-body" name="message"></textarea></div>
-        <div class="hp-field" aria-hidden="true" style="position:absolute;left:-9999px"><label for="f-website">Website</label><input id="f-website" name="website" tabindex="-1" autocomplete="off"></div>
+        <div class="field"><label for="f-company">会社名<i>必須</i></label><input id="f-company" required autocomplete="organization"></div>
+        <div class="field"><label for="f-name">お名前<i>必須</i></label><input id="f-name" required autocomplete="name"></div>
+        <div class="field"><label for="f-mail">メールアドレス<i>必須</i></label><input id="f-mail" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="f-tel">電話番号</label><input id="f-tel" type="tel" autocomplete="tel"></div>
+        <div class="field full"><label for="f-body">お問い合わせ内容</label><textarea id="f-body"></textarea></div>
+        <div class="hp-field" aria-hidden="true" style="position:absolute;left:-9999px"><label for="f-website">Website</label><input id="f-website" tabindex="-1" autocomplete="off"></div>
         <div class="form-foot">
           <button class="btn btn-solid" type="submit" id="f-submit">送信する <span class="arr"></span></button>
           <span class="form-msg" id="formMsg" role="status"></span>
@@ -900,11 +899,12 @@ section { position: relative; }
     const bad = [...e.target.querySelectorAll('[required]')].find(f => !f.value.trim() || (f.type === 'email' && !/^\S+@\S+\.\S+$/.test(f.value)));
     if (bad) { msg.textContent = (bad.previousElementSibling?.firstChild?.textContent || '必須項目') + 'を入力してください。'; bad.focus(); return; }
     const btn = document.getElementById('f-submit');
+    const val = id => document.getElementById(id).value.trim();
     btn.disabled = true; msg.textContent = '送信しています…';
-    const fd = new FormData(e.target);
-    fd.set('topic', topicSel.options[topicSel.selectedIndex].text);
-    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(fd).toString() })
-      .then(r => r.ok ? r : Promise.reject(r))
+    fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+      topic: topicSel.options[topicSel.selectedIndex].text, company: val('f-company'), name: val('f-name'),
+      email: val('f-mail'), tel: val('f-tel'), body: val('f-body'), website: val('f-website') }) })
+      .then(r => r.ok ? r.json() : Promise.reject(r))
       .then(() => { msg.textContent = 'お問い合わせを受け付けました。3営業日以内に担当者よりご連絡いたします。'; e.target.reset(); syncLinks(); })
       .catch(() => { msg.textContent = '送信できませんでした。時間をおいて再度お試しください。'; })
       .finally(() => { btn.disabled = false; });
